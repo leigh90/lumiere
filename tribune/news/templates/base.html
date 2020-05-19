@@ -1,0 +1,26 @@
+!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    {% cloudinary_js_config %}
+
+    {% load cloudinary %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    {% cloudinary_includes %}
+    <script>
+    $(function() {
+        if($.fn.cloudinary_fileupload !== undefined) {
+            $("input.cloudinary-fileupload[type=file]").cloudinary_fileupload();
+  }
+});
+    </script>
+    
+</body>
+</html>

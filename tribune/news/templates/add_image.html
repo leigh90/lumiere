@@ -1,0 +1,9 @@
+{% load cloudinary%}
+{% load url from future%}
+{% block body %}
+<div class="id">
+    <form action="{% url "news.image.views.upload" %}">
+
+    </form>
+</div>
+{% endblock%}
